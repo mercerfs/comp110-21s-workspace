@@ -42,8 +42,7 @@ total_doses_needed/ doses_per_day== days
 round(days,0)
 round(target_people_vaccinated)
 
-end: today + (one_day*days)
-date_achieved: str=end.strftime("%B %d, %Y")
+date_achieved: str=future.strftime("%B %d, %Y")
 
 print("We will reach " + str(target_percent_vaccinated) + "% vaccination in " + str(days) +" days which falls on " + str(date_achieved) 
 + ".")
