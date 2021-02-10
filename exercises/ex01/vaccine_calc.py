@@ -26,23 +26,26 @@ tomorrow.strftime("%B %d, %Y")
 fortnight: timedelta = timedelta(7 + 7)
 future: datetime = today + fortnight
 
-population: int= int(input("Population:"))
-doses_administered: int=int(input("Doses Administered:"))
-doses_per_day: int=int(input("Doses Per Day:"))
-target_percent_vaccinated: int=int(input("Target Percent Vaccinated:"))
+population: int = int(input("Population:"))
+doses_administered: int = int(input("Doses Administered:"))
+doses_per_day: int = int(input("Doses Per Day:"))
+percent: int = int(input("Target Percent Vaccinated:"))
 
-target_people_vaccinated: int= population*(.01*target_percent_vaccinated)
-total_doses_needed: int= (target_people_vaccinated*2)-(doses_administered)
-days: int= total_doses_needed/ doses_per_day
+target_people_vaccinated: float = population * (.01 * percent)
+total_doses_needed: float = (target_people_vaccinated * 2) - (doses_administered)
+days: float = total_doses_needed / doses_per_day
 
-population*(.01*target_percent_vaccinated) == target_people_vaccinated
-(target_people_vaccinated*2)-(doses_administered) == total_doses_needed
-total_doses_needed/ doses_per_day== days
-
-round(days,0)
+round(days, 0)
 round(target_people_vaccinated)
 
-date_achieved: str=future.strftime("%B %d, %Y")
+population * (.01 * percent) == target_people_vaccinated
+(target_people_vaccinated * 2) - (doses_administered) == total_doses_needed
+total_doses_needed / doses_per_day == days
 
-print("We will reach " + str(target_percent_vaccinated) + "% vaccination in " + str(days) +" days which falls on " + str(date_achieved) 
-+ ".")
+days = int(days)
+
+days: timedelta = timedelta(days)
+finish: datetime = days + today
+future: datetime = finish
+
+print("We will reach " + str(percent) + "% vaccination in " + str(days) + " days which falls on " + future.strftime("%B %d, %Y") + ".")

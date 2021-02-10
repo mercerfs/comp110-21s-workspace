@@ -10,7 +10,7 @@ if (how_much % 2 == 0) and (how_much % 7 == 0):
     print("TAR HEELS")
 else:
     if not (how_much % 2 == 1):
-         print("TAR")
+        print("TAR")
     else: 
         if (how_much % 7 == 0):
             print("HEELS")

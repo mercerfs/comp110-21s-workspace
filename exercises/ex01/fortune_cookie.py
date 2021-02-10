@@ -13,21 +13,21 @@ from random import randint
 
 
 # Begin your solution here...
-from random import randint
+
 
 print("Your fortune cookie says...")
 
-fortune_value: int= randint(1,40)
+fortune_value: int = randint(1, 40)
 
-if fortune_value <10:
+if fortune_value < 10:
     print("Patience is the key to a happy life")
 else:
-    if fortune_value <20:
+    if fortune_value < 20:
         print("Hard work beats talent when talent fails to work hard")
     else: 
-        if fortune_value <30:
+        if fortune_value < 30:
             print("You learn more from failure than from success")
         else: 
-            if fortune_value <40:
+            if fortune_value < 40:
                 print("A life full of good fortune awaits you")
 print("Now, go spread positive vibes!")
